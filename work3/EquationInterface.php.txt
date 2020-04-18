@@ -1,0 +1,12 @@
+<? PHP
+ядро пространства имен ;
+интерфейс  EquationInterface {
+
+/ ** 
+* @param float $ a
+* @param float $ b 
+* @param float $ c 
+* 
+* @return array * /
+  решить публичную функцию  ( $ a , $ b , $ c );
+ } 

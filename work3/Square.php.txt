@@ -1,0 +1,32 @@
+<? PHP
+пространство имен нигматулаев;
+
+использовать core \ EquationInterface ;
+
+Класс  Square  расширяет  линейные  реализации  EquationInterface {
+
+	защищенная  функция  findDisc ( $ a , $ b , $ c ) {
+
+		возврат ( $ b * $ b ) - 4 * $ a * $ c ;
+	}
+
+	публичная  функция  решить ( $ a , $ b , $ c ) {
+		    if ( $ a ! = 0 ) {   
+				$ disc = $ this -> findDisc ( $ a , $ b , $ c );
+
+				if ( $ disc > 0 ) {
+					$ this -> x = array (
+					( $ b * (- 1 ) + sqrt ( $ disc )) / ( 2 * $ a ),
+					( $ b * (- 1 ) - sqrt ( $ disc )) / ( 2 * $ a )
+					);
+					вернуть  $ this -> x ;
+				} elseif ( $ disc == 0 ) {
+					$ this -> x = array (
+					( $ b * (- 1 )) / ( 2 * $ a )
+					);
+					вернуть  $ this -> x ;
+				}
+			} 
+			вернуть  $ this -> linearEquation ( $ a , $ b );
+		}	
+} 

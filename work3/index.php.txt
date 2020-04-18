@@ -1,0 +1,87 @@
+<? PHP
+// íèíåéíîå óðàâíåíèå a * x + b = 0
+класс  Linear {
+
+	защищенный  $ x ;
+
+	публичная  функция  __construct ( $ result = null ) {
+		$ this -> x = $ result ;
+	}
+
+	публичная  функция  getX () {
+		вернуть  $ this -> x ;
+	}
+
+	публичная  функция  setX ( $ num ) {
+		$ this -> x = $ num ;
+	}
+
+	публичная  функция  linearEquation ( $ a , $ b ) {
+		if ( $ a ! = 0 ) {
+			$ this -> x = ( $ b * (- 1 )) / $ a ;
+			вернуть  $ this -> x ;
+		} еще {
+			вернуть  ложь ;
+		}
+	}
+}
+
+// Титульный топор ^ 2 + bx + c
+классная  площадь  расширяется  линейно {
+
+		публичная  функция  __construct ( $ x ) {
+			parent :: __construct ( $ x );
+		}
+		// îáàâéòü ðåøåíèå ëèíåéíîãî îðàâíåíèÿ, àñëè a = 0
+		// Титульный листок
+		защищенная  функция  findDisc ( $ a , $ b , $ c ) {
+		    возврат ( $ b * $ b ) - 4 * $ a * $ c ;
+		}
+
+		// Титульный скитальон
+		публичная  функция  discEquation ( $ a , $ b , $ c ) {
+		    if ( $ a ! = 0 ) {
+				$ disc = $ this -> findDisc ( $ a , $ b , $ c );
+ini_set ( "display_errors" , 1 ); сообщение об ошибке (- 1 );
+использовать газетов \ GazetovException ;
+использовать газеты \ MyLog ;
+использовать газеты \ линейные ;
+использовать газеты \ площадь ;
+
+				if ( $ disc > 0 ) {
+					$ x1 = ( $ b * (- 1 ) + sqrt ( $ disc )) / ( 2 * $ a );
+					$ x2 = ( $ b * (- 1 ) - sqrt ( $ disc )) / ( 2 * $ a );
+					$ this -> x = Array ( $ x1 , $ x2 );
+				} elseif ( $ disc == 0 ) {
+					$ this -> x = ( $ b * (- 1 )) / ( 2 * $ a );
+				} еще {
+					$ this -> x = false ;
+				}
+
+				вернуть  $ this -> x ;
+			} еще {
+				$ this -> linearEquation ( $ a , $ b );
+			}   
+		}
+}
+/ *
+класс B расширяет A {
+
+}
+* /
+$ lineareq = new  Linear ();
+$ lineareq -> linearEquation ( 3 , 9 );
+включают  'core / EquationInterface.php' ;
+включить  'core / LogInterface.php' ;
+включайте  'core / LogAbstract.php' ;
+включают в себя  'нигматулаев / GazetovException.php' ;
+include  'gazetov / MyLog.php' ;
+включает в себя  'нигматулаев / Linear.php' ;
+включают в себя  'нигматулаев / Square.php' ;
+
+$ Sqrteq = новый  Square ( нуль );
+$ sqrteq -> discEquation ( 0 , 6 , 9 ); 
+$ квадрат = новый  квадрат ( ноль );
+$ roots = $ square -> solve ( 1 , 2 , 3 );
+
+MyLog :: write (); 
