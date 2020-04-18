@@ -1,0 +1,6 @@
+<? PHP
+пространство имен нигматулаев;
+
+Класс  GazetovException  extends \ RuntimeException {
+
+} 

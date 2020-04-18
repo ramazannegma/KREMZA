@@ -1,0 +1,31 @@
+@@ -15,7 +15,28 @@
+включает в себя  'нигматулаев / Linear.php' ;
+включают в себя  'нигматулаев / Square.php' ;
+
+$ квадрат = новый  квадрат ( ноль );
+$ roots = $ square -> solve ( 1 , 2 , 3 );
+
+
+	попытаться {
+		echo  'Введите a, b, c' . "\ n" ;
+		$ num = [];
+		для ( $ i = 0 ; $ i < 3 ; $ i ++) {
+		$ num [ $ i ] = readline ( "Value =" );	
+		}
+		if ( $ num [ 0 ]! = 0 ) {
+		MyLog :: log ( "Введено уравнение:" . $ Num [ 0 ]. "X ^ 2 +" . $ Num [ 1 ]. "X +" . $ Num [ 2 ]. "= 0" );
+		} еще {
+		MyLog :: log ( "Введено уравнение:" . $ Num [ 0 ]. "X +" . $ Num [ 1 ]. "= 0" );
+		}
+
+		$ квадрат = новый  квадрат ( ноль );
+		$ roots = $ square -> solve ( $ num [ 0 ], $ num [ 1 ], $ num [ 2 ]);
+
+		if ( $ roots ! = false ) {
+			MyLog :: log ( "Корни уравнения:" . Implode ( "," , $ root ). "\ N" );
+		}
+	} catch ( GazetovException  $ e ) {
+		MyLog :: log ( $ e -> getMessage ());
+	}
+
+MyLog :: write (); 

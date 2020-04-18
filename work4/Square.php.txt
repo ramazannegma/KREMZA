@@ -1,0 +1,20 @@
+@@ -12,6 +12,7 @@ защищенная функция findDisc ($ a, $ b, $ c) {
+
+	публичная  функция  решить ( $ a , $ b , $ c ) {
+		    if ( $ a ! = 0 ) {   
+				MyLog :: log ( «Это квадратное уравнение» );
+				$ disc = $ this -> findDisc ( $ a , $ b , $ c );
+
+				if ( $ disc > 0 ) {
+@@ -26,7 +27,11 @@ public function solve ($ a, $ b, $ c) {
+					);
+					вернуть  $ this -> x ;
+				}
+
+				бросить  новое  NigmatulaevException ( «Такое уравнение не имеет решений \ n» );
+			} 
+
+			вернуть  $ this -> linearEquation ( $ a , $ b );
+
+		}	
+} 
