@@ -1,0 +1,7 @@
+@ Эхо  выключено
+ECHO Получить версию файла
+git symbolic-ref --short -q HEAD > версия
+ЭХО Клонирование ядра
+git clone https://github.com/rok9ru/trpo-core.git core /
+ЭХО Успех!
+Пауза

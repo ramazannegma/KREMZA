@@ -1,0 +1,9 @@
+@@ -24,7 +24,7 @@ public function linearEquation ($ a, $ b) {
+				вернуть  $ this -> x ;
+			} 
+
+			бросить  новое  RuntimeException ( «Такое уравнение не существует \ n» );
+			бросить  новое  GazetovException ( «Такое уравнение не существует \ n» );
+
+	}
+}

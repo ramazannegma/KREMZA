@@ -1,0 +1,21 @@
+@@ -1,4 +1,5 @@
+<? PHP
+
+пространство имен нигматулаев;
+
+использовать core \ LogAbstract ;
+@@ -15,6 +16,13 @@ открытый статический журнал функций ($ str) {
+	}
+
+	публичная  функция  _write () {
+		echo  implode ( "\ n" , MyLog :: Instance () -> log );
+
+		$ d = new \ DateTime ( "NOW" );
+		$ version = file_get_contents ( __DIR__ . "/../version" );
+		if (! file_exists ( __DIR__ . "/../log" )) {
+			mkdir ( __DIR__ . "/../log" , 0777 , true );
+		}
+		file_put_contents ( BASEURI . '/ log /' . $ d -> формат ( 'dm-Y__H__i_s_u' ). '.log' , "Версия файла:" . $ version . "\ r \ n" . implode ( "\ r \ n " , MyLog :: Instance () -> log ));
+		echo  implode ( "\ r \ n" , MyLog :: Instance () -> log );
+	}
+}

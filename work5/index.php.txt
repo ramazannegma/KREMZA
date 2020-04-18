@@ -1,0 +1,29 @@
+<? PHP
+
+define ( "BASEURI" , __DIR__ );
+ini_set ( "display_errors" , 1 ); сообщение об ошибке (- 1 );
+использовать нигматулаев \ NigmatulaevException ;
+использовать нигматулаев \ MyLog ;
+использовать нигматулаев \ линейные ;
+использовать нигматулаев \ площадь ;
+
+
+включают  'core / EquationInterface.php' ;
+включить  'core / LogInterface.php' ;
+включайте  'core / LogAbstract.php' ;
+включают в себя  'нигматулаев / GazetovException.php' ;
+include  'Nigmatulaev / MyLog.php' ;
+включает в себя  'нигматулаев / Linear.php' ;
+включают в себя  'нигматулаев / Square.php' ;
+
+
+включают  BaseUri . '/core/EquationInterface.php' ;
+включают  BaseUri . '/core/LogInterface.php' ;
+включают  BaseUri . '/core/LogAbstract.php' ;
+включают  BaseUri . '/Nigmatulaev/NigmatulaevException.php' ;
+включают  BaseUri . '/Nigmatulaev/MyLog.php' ;
+включают  BaseUri . '/Nigmatulaev/Linear.php' ;
+включают  BaseUri . '/Nigmatulaev/Square.php' ;
+
+	попытаться {
+		echo  'Введите a, b, c' . "\ n" ;
