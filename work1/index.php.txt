@@ -1,0 +1,29 @@
+<? PHP
+класс  С {
+
+}
+класс  А  расширяет  C {
+	public  $ obj4 ;
+	public  $ obj5 ;
+		публичная  функция  __construct ( C : $ obj4 , C : $ obj5 ) {
+			$ this -> obj4 = $ obj4 ;
+			$ this -> obj5 = $ obj5 ;
+		}
+}
+
+класс  B  расширяет  A {
+	public  $ obj2 ;
+		публичная  функция  __construct ( C : $ obj2 , C : $ obj4 , C : $ obj5 ) {
+			parent :: __construct ( $ obj4 , $ obj5 );
+			$ this -> obj2 = $ obj2 ;
+		}
+}
+
+
+
+$ obj5 = новый  класс  C ();
+$ obj4 = новый  класс  C ();
+$ obj3 = новый  класс  C ();
+$ obj2 = новый  класс  C ();
+$ obj6 = новый  класс  A ( $ obj4 , $ obj5 );
+$ obj1 = новый  класс  B ( $ obj2 , $ obj3 , $ obj6 ); 
